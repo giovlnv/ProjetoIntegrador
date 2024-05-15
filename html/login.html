@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body id="login">
+    <div class="login-container">
+        <div class="login-container-content">
+            <div class="login-logo"></div>
+            <form action="/submit-login" method="post">
+                <h3>E-mail ou Telefone:</h3>
+                <input type="text" name="username" required><br>
+                <h3>Senha:</h3>
+                <input type="password" name="password" required><br>
+                <h3><a href="#">Esqueci minha senha</a></h3>
+                <input type="submit" class="btn" value="Entrar">
+            </form>
+            <h4>Ainda não tem uma conta? <a href="./cadastro.html">Cadastre-se aqui</a></h4>
+        </div>
+    </div>
+    <script type="module" src="../js/script.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
