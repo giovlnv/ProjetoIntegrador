@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eviene</title>
     <!-- link to CSS -->
     <link rel="stylesheet" href="../style.css">
     <!-- remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- script -->
+    <script type="module" src="../js/sidebar.js"></script>
 </head>
 
 <body>
@@ -49,39 +50,40 @@
         </div>
         <!-- menu -->
         <div class="menu">
-            <a href="#" class="active">
+            <a href="#" class="menu-link active" onclick="changeFrame('main.html')">
                 <span class="icon">
                     <i class="ri-function-line"></i>
                 </span>
                 Feed
             </a>
-            <a href="evento.html">
+            <a href="#" class="menu-link" onclick="changeFrame('evento.html')">
                 <span class="icon">
                     <i class="ri-add-fill"></i>
                 </span>
                 Novo evento
             </a>
-            <a href="#">
+            <a href="#" class="menu-link">
                 <span class="icon">
                     <i class="ri-search-line"></i>
                 </span>
                 Explorar
-                <a href="#">
-                    <span class="icon">
-                        <i class="ri-settings-2-line"></i>
-                    </span>
-                    Configurações
-                </a>
-                <a href="login.html">
-                    <span class="icon">
-                        <i class="ri-logout-box-r-line"></i>
-                    </span>
-                    Login
-                </a>
+            </a>
+            <a href="#" class="menu-link">
+                <span class="icon">
+                    <i class="ri-settings-2-line"></i>
+                </span>
+                Configurações
+            </a>
+            <a href="login.html">
+                <span class="icon">
+                    <i class="ri-logout-box-r-line"></i>
+                </span>
+                Logout
+            </a>
         </div>
     </div>
     <div class="content-main">
-        <iframe src="main.html" class="content-main">
+        <iframe src="main.html" class="content-main" id="mainFrame">
     </div>
     <script src="../js/main.js"></script>
 </body>
