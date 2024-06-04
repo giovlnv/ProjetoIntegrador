@@ -61,6 +61,13 @@ closeBtn.addEventListener("click", () => {
   eventosFullView.classList.remove("active");
 });
 
+eventosFullView.addEventListener("click", (event) => {
+  if (event.target === eventosFullView) {
+    eventosFullView.classList.remove("active");
+  }
+});
+
+
 const mainPosts = document.querySelector('.main-posts');
 
 
