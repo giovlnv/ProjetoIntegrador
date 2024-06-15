@@ -33,11 +33,13 @@
                 <h3>Nome de Usuário</h3>
                 <input type="text" name="username"><br>
                 <h3>Bio</h3>
-                <textarea name="atracoesEvento" maxlength="500"></textarea><br>
-                <input type="submit" class="btn" value="Salvar">
-            </form>
-            <button value="EXCLUIR CONTA"></button>
-
+                <textarea name="bioPerfil" maxlength="500"></textarea><br>
+                <div class="edit-container-content">
+                    <input type="submit" class="btn" value="Salvar">
+                    <input type="button" class="btn btn-delete" value="Excluir conta" onclick="excluirConta()">
+                </div>
+                </form>
+            
 
         </div>
     </div>

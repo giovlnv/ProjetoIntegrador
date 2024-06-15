@@ -839,3 +839,29 @@ body#login {
     background: rgba(4, 73, 131, 1);
     text-decoration: none;
 }
+
+.edit-container .btn-delete {
+    border-radius: 7px;
+    color: rgba(131, 4, 4, 0.8);
+    font-size: 20px;
+    font-weight: medium;
+    background: none;
+    border: 2px solid rgba(131, 4, 4, 0.8);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    margin: 1vh auto 0;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.edit-container .btn-delete:hover {
+    color: #fff;
+    background: rgba(131, 4, 4, 1);
+    text-decoration: none;
+}
+
+.edit-container-content {
+display: flex;
+flex-wrap: wrap;
+}
