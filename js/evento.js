@@ -13,27 +13,11 @@ const eventForm = document.getElementById('evento')
 
 eventForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const imagemEvento = document.getElementById('file-ip-1').files[0];
-  const nomeEvento = document.getElementById('nomeEvento').value;
-  const localEvento = document.getElementById('localEvento').value;
-  const eventDate = document.getElementById('eventDate').value;
-  const atracoesEvento = document.getElementById('atracoesEvento').value;
-
-  const formData = new FormData();
   
-  for (let i = 0; i < imagemEvento.length; i++) {
-    formData.append('banner', imagemEvento[i]);
-  }
-
-  
-  formData.append('bannerName', imagemEvento.name)
-  formData.append('description', nomeEvento);
-  formData.append('location', localEvento);
-  formData.append('date', eventDate);
-  formData.append('attractions', atracoesEvento);
+  const formData = new FormData(eventForm);
 
   try {
-    const response = await fetch('http://localhost:3001/event/', {
+    const response = await fetch('https://api-eviene.onrender.com/event/', {
       method: 'POST',
       headers: {
         "Authorization": `Bearer ${localStorage.getItem("logado")}`

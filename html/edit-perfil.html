@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eviene evento</title>
+    <title>eviene perfil</title>
     <!-- css -->
     <link rel="stylesheet" href="../style.css">
     <!-- remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
-<body>
-    <div class="cadastro-container">
-        <div class="cadastro-container-content">
-            <form method="post" id="evento" enctype="multipart/form-data">
-                <h3>Banner:</h3>
+
+<body id="edit-perfil">
+    <div class="edit-container">
+        <div class="edit-container-content">
+            <form method="post" id="editProfile" enctype="multipart/form-data">
                 <label>
                     <input type="file" accept="image/*" onchange="showPreview(event);" id="file-ip-1" name="images" multiple>
                     <svg id="fileInput" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
@@ -28,24 +28,24 @@
                         <img id="file-ip-1-preview">
                     </div>
                 </label>
-                <br>
-                <h3>Nome do evento:</h3>
-                <input type="text" name="description" required><br>
-                <h3>Local do evento:</h3>
-                <input type="text" name="location" required><br>
-                <h3>Data do evento:</h3>
-                <input type="date" name="date" required><br>
-                <!-- <h3>Máximo de participantes:</h3>
-                <input type="number" name="participantesMax" required><br> -->
-                <h3>Atrações:</h3>
-                <textarea name="attractions" maxlength="500"></textarea><br>
-                <button class="btn" type="submit"">Enviar</button>
-            </form>
+                <h3>Nome</h3>
+                <input type="text" name="name" id="name"><br>
+                <h3>Nome de Usuário</h3>
+                <input type="text" name="username" id="username"><br>
+                <h3>Bio</h3>
+                <textarea name="bio" maxlength="500" id="bio"></textarea><br>
+                <div class="edit-container-content">
+                    <input type="submit" class="btn" value="Salvar">
+                    <input type="button" class="btn btn-delete" value="Excluir conta" onclick="excluirConta()">
+                </div>
+                </form>
+            
+
         </div>
     </div>
-    <!-- js -->
-    <script src="../js/evento.js"></script>
 
-</body>
+        <script src="../js/main.js"></script>
+<script src="../js/edit-perfil.js"></script>
+    </body>
 
 </html>
