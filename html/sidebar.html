@@ -10,6 +10,8 @@
     <!-- remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- script -->
+    <script src="../js/infos.js"></script>
+    <script src="../js/checklogin.js"></script>
     <script type="module" src="../js/sidebar.js"></script>
 </head>
 
@@ -22,29 +24,29 @@
         <!-- profile image -->
         <div class="profile">
             <div class="profile-img">
-                <img src="../img/profile.png" alt="">
+                <img src="../img/profile.png" alt="" id="profilePicture">
             </div>
             <div class="name">
-                <h1>gigio</h1>
+                <h1 id="name">gigio</h1>
                 <div class="verified-icon"></div>
             </div>
-            <span>@gigiovlnv</span>
+            <span id="username">@gigiovlnv</span>
         </div>
         <!-- about -->
         <div class="about">
             <!-- box posts -->
             <div class="box">
-                <h3>54</h3>
+                <h3 id="posts">54</h3>
                 <span>Posts</span>
             </div>
             <!-- box followers -->
             <div class="box">
-                <h3>14.4K</h3>
+                <h3 id="followers">14.4K</h3>
                 <span>Followers</span>
             </div>
             <!-- box following -->
             <div class="box">
-                <h3>3</h3>
+                <h3 id="following">3</h3>
                 <span>Following</span>
             </div>
         </div>
@@ -85,7 +87,5 @@
     <div class="content-main">
         <iframe src="main.html" class="content-main" id="mainFrame">
     </div>
-    <script src="../js/main.js"></script>
 </body>
-
 </html>

@@ -14,25 +14,25 @@
         <div class="login-container-content">
             <div class="login-logo"></div>
             <div class="form-page page1 active">
-            <form method="post">
+            <form method="post" id="register">
                 <h3>Nome:</h3>
-                <input type="text" name="nome" required><br>
+                <input type="text" id="name" required><br>
                 <h3>Nome de usuário:</h3>
-                <input type="text" name="username" required><br>
+                <input type="text" id="username" required><br>
                 <h3>Data de nascimento:</h3>
-                <input type="date" name="birthdate" required><br>
+                <input type="date" id="birthdate" required><br>
                 <button class="btn" onclick="nextPage()">Continuar</button>
             </div>
 
             <div class="form-page page2">
                 <h3>E-mail:</h3>
-                <input type="text" name="e-mail" required><br>
+                <input type="text" id="email" required><br>
                 <h3>Senha:</h3>
-                <input type="password" name="password" required><br>
+                <input type="password" id="password" required><br>
                 <h3>Confirmar senha:</h3>
-                <input type="password" name="password" required><br>
+                <input type="password" id="confirmPassword" required><br>
                 <button class="btn" onclick="prevPage()">Voltar</button>
-                <button class="btn" onclick="submitForm()">Enviar</button>
+                <button class="btn" type="submit">Enviar</button>
             </div>
             </form>
             <h4>Já tem uma conta? <a href="./login.html">Entrar</a></h4>

@@ -14,7 +14,7 @@
 <body>
     <div class="cadastro-container">
         <div class="cadastro-container-content">
-            <form method="post">
+            <form method="post" id="evento" enctype="multipart/form-data">
                 <h3>Banner:</h3>
                 <label>
                     <input type="file" accept="image/*" onchange="showPreview(event);" id="file-ip-1">
@@ -30,16 +30,16 @@
                 </label>
                 <br>
                 <h3>Nome do evento:</h3>
-                <input type="text" name="nomeEvento" required><br>
+                <input type="text" id="nomeEvento" required><br>
                 <h3>Local do evento:</h3>
-                <input type="text" name="localEvento" required><br>
+                <input type="text" id="localEvento" required><br>
                 <h3>Data do evento:</h3>
-                <input type="date" name="eventDate" required><br>
-                <h3>Máximo de participantes:</h3>
-                <input type="number" name="participantesMax" required><br>
+                <input type="date" id="eventDate" required><br>
+                <!-- <h3>Máximo de participantes:</h3>
+                <input type="number" id="participantesMax" required><br> -->
                 <h3>Atrações:</h3>
-                <textarea name="atracoesEvento" maxlength="500"></textarea><br>
-                <button class="btn" onclick="submitForm()">Enviar</button>
+                <textarea id="atracoesEvento" maxlength="500"></textarea><br>
+                <button class="btn" type="submit"">Enviar</button>
             </form>
         </div>
     </div>
