@@ -787,8 +787,8 @@ body#login {
     height:100%;
     width: 10rem;
     height: 10rem;
-    display:none;
     margin: 0.5rem auto;
+    display: block;
     border-radius: 100%;
 }
 

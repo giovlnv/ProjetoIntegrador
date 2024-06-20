@@ -2,8 +2,6 @@
 function changeFrame(url) {
     const iframe = document.getElementById('mainFrame');
     iframe.src = url;
-    console.log(url)
-    console.log('apertou')
 
     // Remover a classe 'active' de todos os links do menu
     const menuLinks = document.querySelectorAll('.menu-link');

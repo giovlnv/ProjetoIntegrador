@@ -2,10 +2,7 @@ function showPreview(event){
     if(event.target.files.length > 0){
       var src = URL.createObjectURL(event.target.files[0]);
       var preview = document.getElementById("file-ip-1-preview");
-      var icon = document.getElementById("fileInput");
       preview.src = src;
-      preview.style.display = "block";
-      icon.style.display = "none";
     }
 }
 
@@ -23,10 +20,12 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   const name = document.getElementById('name')
   const username = document.getElementById('username')
   const bio = document.getElementById('bio')
+  var preview = document.getElementById("file-ip-1-preview");
 
   name.value = data.name
   username.value = data.username
   bio.value = data.bio
+  preview.src = data.profilePic
 })
 
 document.getElementById('editProfile').addEventListener('submit', async (e)=>{
@@ -44,6 +43,8 @@ document.getElementById('editProfile').addEventListener('submit', async (e)=>{
   const data = await response.json()
   alert(data.message)
 
+  top.location.reload(true)
+
 })
 
 async function excluirConta(){
@@ -56,8 +57,8 @@ async function excluirConta(){
   const data = await response.json()
   alert(data.message)
 
-  if(req.status == 200){
+  if(response.status == 200){
     localStorage.clear()
-    window.location.href = './login.html'
+    top.location.href = './login.html'
   }
 }
