@@ -8,3 +8,31 @@ function showPreview(event){
       icon.style.display = "none";
     }
 }
+
+const eventForm = document.getElementById('evento')
+
+eventForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  
+  const formData = new FormData(eventForm);
+
+  try {
+    const response = await fetch('https://api-eviene.onrender.com/event/', {
+      method: 'POST',
+      headers: {
+        "Authorization": `Bearer ${localStorage.getItem("logado")}`
+      },
+      body: formData
+    });
+
+    if (!response.ok) {
+      throw new Error('Erro ao criar o evento');
+    }
+
+    const data = await response.json();
+    alert(data.message);
+  } catch (error) {
+    console.error('Erro:', error);
+    alert('Ocorreu um erro ao criar o evento.');
+  }
+});

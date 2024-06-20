@@ -15,9 +15,9 @@
 <body id="edit-perfil">
     <div class="edit-container">
         <div class="edit-container-content">
-            <form action="/submit-changes" method="post">
+            <form method="post" id="editProfile" enctype="multipart/form-data">
                 <label>
-                    <input type="file" accept="image/*" onchange="showPreview(event);" id="file-ip-1">
+                    <input type="file" accept="image/*" onchange="showPreview(event);" id="file-ip-1" name="images" multiple>
                     <svg id="fileInput" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
                         fill="currentColor">
                         <path
@@ -29,11 +29,11 @@
                     </div>
                 </label>
                 <h3>Nome</h3>
-                <input type="text" name="nome"><br>
+                <input type="text" name="name" id="name"><br>
                 <h3>Nome de Usuário</h3>
-                <input type="text" name="username"><br>
+                <input type="text" name="username" id="username"><br>
                 <h3>Bio</h3>
-                <textarea name="bioPerfil" maxlength="500"></textarea><br>
+                <textarea name="bio" maxlength="500" id="bio"></textarea><br>
                 <div class="edit-container-content">
                     <input type="submit" class="btn" value="Salvar">
                     <input type="button" class="btn btn-delete" value="Excluir conta" onclick="excluirConta()">

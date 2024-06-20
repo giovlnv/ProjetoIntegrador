@@ -14,10 +14,10 @@
 <body>
     <div class="cadastro-container">
         <div class="cadastro-container-content">
-            <form method="post">
-                <h3>Banner</h3>
+            <form method="post" id="evento" enctype="multipart/form-data">
+                <h3>Banner:</h3>
                 <label>
-                    <input type="file" accept="image/*" onchange="showPreview(event);" id="file-ip-1">
+                    <input type="file" accept="image/*" onchange="showPreview(event);" id="file-ip-1" name="images" multiple>
                     <svg id="fileInput" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
                         fill="currentColor">
                         <path
@@ -29,17 +29,17 @@
                     </div>
                 </label>
                 <br>
-                <h3>Nome do evento</h3>
-                <input type="text" name="nomeEvento" required><br>
-                <h3>Local do evento</h3>
-                <input type="text" name="localEvento" required><br>
-                <h3>Data do evento</h3>
-                <input type="date" name="eventDate" required><br>
-                <h3>Máximo de participantes</h3>
-                <input type="number" name="participantesMax" required><br>
-                <h3>Atrações</h3>
-                <textarea name="atracoesEvento" maxlength="500"></textarea><br>
-                <button class="btn" onclick="submitForm()">Enviar</button>
+                <h3>Nome do evento:</h3>
+                <input type="text" name="description" required><br>
+                <h3>Local do evento:</h3>
+                <input type="text" name="location" required><br>
+                <h3>Data do evento:</h3>
+                <input type="date" name="date" required><br>
+                <!-- <h3>Máximo de participantes:</h3>
+                <input type="number" name="participantesMax" required><br> -->
+                <h3>Atrações:</h3>
+                <textarea name="attractions" maxlength="500"></textarea><br>
+                <button class="btn" type="submit"">Enviar</button>
             </form>
         </div>
     </div>
