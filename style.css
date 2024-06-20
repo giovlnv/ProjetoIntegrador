@@ -21,7 +21,6 @@ body#login {
 }
 
 :root {
-    --gradient: linear-gradient(to right, #044983, #F28B30);
     --gradient2: linear-gradient(transparent, #222 70%);
     --gradient3: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 212, 255, 0) 100%);
     ;
@@ -563,7 +562,6 @@ body#login {
     height: 100%;
     width: 7.5rem;
     height: 12.5rem;
-    /* display:none; */
     margin: 0.5rem auto;
 }
 
