@@ -390,7 +390,8 @@ body#login {
 }
 
 .eventos-full-view .owner,
-.eventos-full-view .distance {
+.eventos-full-view .distance,
+.eventos-full-view .local_event {
     position: absolute;
     top: 0.5rem;
     width: 100%;
@@ -403,27 +404,15 @@ body#login {
     z-index: 2;
 }
 
-.eventos-full-view .distance {
+.eventos-full-view .local_event {
     top: 2rem;
-    font-size: small;
-    font-weight: light;
+    font-weight: bold;
 }
 
-.eventos-full-view .btn {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 7rem;
-    padding: 8px 16px;
-    align-content: center;
-    text-align: center;
-    font-size: medium;
-    font-weight: medium;
-    color: #f8f8f8;
-    z-index: 2;
-    border-radius: 10px;
-    background: #044983;
+.eventos-full-view .distance {
+    top: 3.5rem;
+    font-size: small;
+    font-weight: light;
 }
 
 /* feed */

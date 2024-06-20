@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
   const eventImageFull = document.querySelector(".eventos-full-view img");
   const ownerFull = document.querySelector(".eventos-full-view .owner");
   const distanceFull = document.querySelector(".eventos-full-view .distance");
+  const local_event = document.querySelector(".eventos-full-view .local_event");
+
 
   let currentActive = 0;
 
@@ -36,9 +38,14 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       const formattedDate = `${eventDate.getDate()}/${eventDate.getMonth() + 1}/${eventDate.getFullYear()} ${eventDate.getHours()}:${eventDate.getMinutes().toString().padStart(2, '0')}`;
       distance.innerHTML = formattedDate;
 
+      const local_event = document.createElement("div");
+      local_event.classList.add("owner");
+      local_event.innerHTML = s.description;
+
       event.appendChild(img);
       event.appendChild(owner);
       event.appendChild(distance);
+      event.appendChild(local_event);
 
       eventos.appendChild(event);
 
@@ -60,6 +67,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
       const formattedDate = `${eventDate.getDate()}/${eventDate.getMonth() + 1}/${eventDate.getFullYear()} ${eventDate.getHours()}:${eventDate.getMinutes().toString().padStart(2, '0')}`;
       eventImageFull.src = allEvents[index].banner;
       ownerFull.innerHTML = allEvents[index].description;
+      local_event.innerHTML = allEvents[index].location;
       distanceFull.innerHTML = formattedDate;
       eventosFullView.classList.add("active");
     }
@@ -121,8 +129,6 @@ eventosFullView.addEventListener("click", (event) => {
       likesCount.textContent = post.likes.length;
       const shareIcon = document.createElement('i');
       shareIcon.classList.add('ri-share-2-line');
-      // const sharesCount = document.createElement('span');
-      // sharesCount.textContent = post.sharesCount;
 
       postProfile.appendChild(postProfileImg);
       postProfile.appendChild(ownerName);
