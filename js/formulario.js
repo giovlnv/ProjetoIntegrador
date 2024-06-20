@@ -18,6 +18,7 @@ function prevPage() {
     currentPage--;
   }
 }
+
 const registerUser = document.getElementById('register');
 
 registerUser.addEventListener('submit', async (e)=>{
